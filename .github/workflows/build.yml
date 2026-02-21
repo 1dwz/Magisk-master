@@ -35,6 +35,9 @@ jobs:
     - name: Setup NDK
       run: python build.py ndk
     
+    - name: Set executable permissions
+      run: chmod +x app/gradlew
+    
     - name: Build release
       run: python build.py -r all
     
